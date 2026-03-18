@@ -19,6 +19,7 @@ body {
 }
 
 /* 卡片 */
+/* 容器自適應手機 */
 .container {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
@@ -30,47 +31,50 @@ body {
     max-width: 400px;  /* 桌機不會太大 */
 }
 
-/* 標題 */
+/* 標題自適應字體 */
 h1 {
     margin-bottom: 20px;
+    font-size: clamp(24px, 8vw, 40px); /* 小螢幕 24px，大螢幕 40px */
 }
 
-/* 下拉選單 */
+/* 下拉選單自適應 */
 select {
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: none;
     margin-bottom: 20px;
+    font-size: clamp(14px, 4vw, 18px);
+    width: 80%;          /* 手機上不會太窄 */
 }
 
-/* 按鈕 */
+/* 按鈕自適應 */
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, #ff7eb3, #8a2be2);
     color: white;
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 18px); /* 自動縮放 */
     cursor: pointer;
     transition: 0.3s;
+    width: 80%;         /* 手機上按鈕變寬 */
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* 手機放小一點，避免超出 */
     box-shadow: 0 0 15px #ff7eb3;
 }
 
-/* 抽選結果 */
+/* 結果區自適應 */
 #result {
     margin-top: 30px;
-    font-size: 28px; /* 預設字體 */
     font-weight: bold;
     letter-spacing: 2px;
     padding: 20px;
     background: rgba(255,255,255,0.1);
     border-radius: 15px;
     min-width: 150px;
-    max-width: 90vw; /* 手機寬度自動縮放 */
+    max-width: 90vw;
     word-wrap: break-word;
-    font-size: clamp(24px, 10vw, 50px); /* 自適應字體大小 */
+    font-size: clamp(24px, 10vw, 50px); /* 字體自動縮放 */
 }
