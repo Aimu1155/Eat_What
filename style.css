@@ -20,7 +20,7 @@ body {
 /* 容器自適應手機 */
 .container {
     background: rgba(255, 255, 255, 0.08); /* 透光卡片感 */
-    padding: 25px;
+    padding: 100px;
     border-radius: 25px;
     text-align: center;
     backdrop-filter: blur(12px);
@@ -39,23 +39,23 @@ h1 {
 
 /* 下拉選單自適應 */
 select {
-    padding: 15px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 120px;
     border: none;
     margin-bottom: 20px;
-    font-size: clamp(16px, 4vw, 20px); /* 手機自動放大 */
+    font-size: clamp(20px, 4vw, 50px); /* 手機自動放大 */
     width: 100%;  /* 填滿 container */
     box-sizing: border-box;
 }
 
 /* 按鈕自適應寬度 */
 button {
-    padding: 15px 0;
+    padding: 50px 0;
     border: none;
     border-radius: 15px;
     background: linear-gradient(135deg, #ff7eb3, #8a2be2);
     color: white;
-    font-size: clamp(16px, 4vw, 20px); /* 手機自動放大 */
+    font-size: clamp(50px, 4vw, 20px); /* 手機自動放大 */
     cursor: pointer;
     transition: 0.3s;
     width: 100%; /* 填滿 container */
@@ -79,7 +79,7 @@ button:hover {
     padding: 25px;
     background: rgba(255,255,255,0.15);
     border-radius: 20px;
-    width: 100%; /* 填滿 container */
+    width: 90%; /* 填滿 container */
     word-wrap: break-word;
     font-size: clamp(28px, 10vw, 55px); /* 自動縮放字體 */
 }
