@@ -27,8 +27,10 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    width: 90vw;       /* 手機自適應 */
-    max-width: 400px;  /* 桌機不會太大 */
+
+    /* 響應式寬度 */
+    width: 80vw;       /* 手機寬度佔螢幕 80% */
+    max-width: 400px;  /* 桌機上不會太大 */
 }
 
 /* 標題自適應字體 */
@@ -44,20 +46,20 @@ select {
     border: none;
     margin-bottom: 20px;
     font-size: clamp(14px, 4vw, 18px);
-    width: 80%;          /* 手機上不會太窄 */
+    width: 90%;  /* 手機上變寬，貼近 container */
 }
 
-/* 按鈕自適應 */
+/* 按鈕自適應寬度 */
 button {
-    padding: 12px 25px;
+    padding: 12px 0;
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, #ff7eb3, #8a2be2);
     color: white;
-    font-size: clamp(14px, 4vw, 18px); /* 自動縮放 */
+    font-size: clamp(14px, 4vw, 18px);
     cursor: pointer;
     transition: 0.3s;
-    width: 80%;         /* 手機上按鈕變寬 */
+    width: 90%;  /* 手機上按鈕也填滿 container */
 }
 
 button:hover {
@@ -76,5 +78,5 @@ button:hover {
     min-width: 150px;
     max-width: 90vw;
     word-wrap: break-word;
-    font-size: clamp(24px, 10vw, 50px); /* 字體自動縮放 */
+    font-size: clamp(24px, 10vw, 50px);
 }
