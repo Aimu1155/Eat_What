@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+
+    /* 🌙 背景圖片 + 漸層 */
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+        url("character.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 卡片 */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* 標題 */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* 下拉選單 */
+select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* 按鈕 */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7eb3, #8a2be2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff7eb3;
+}
+
+/* 抽選結果 */
+#result {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
