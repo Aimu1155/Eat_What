@@ -4,11 +4,9 @@ body {
     font-family: "Segoe UI", sans-serif;
     color: white;
 
-    /* 🌙 背景圖片 + 漸層 */
-    background: 
+    background:
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-        url("character.png");
-
+        url("character.png");  /* 背景角色 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,45 +19,51 @@ body {
 /* 卡片 */
 /* 容器自適應手機 */
 .container {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08); /* 透光卡片感 */
+    padding: 25px;
+    border-radius: 25px;
     text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
 
     /* 響應式寬度 */
-    width: 80vw;       /* 手機寬度佔螢幕 80% */
-    max-width: 400px;  /* 桌機上不會太大 */
+    width: 80vw;       /* 手機覆蓋螢幕約 80% */
+    max-width: 450px;  /* 桌機不會太大 */
 }
 
 /* 標題自適應字體 */
 h1 {
-    margin-bottom: 20px;
-    font-size: clamp(24px, 8vw, 40px); /* 小螢幕 24px，大螢幕 40px */
+    margin-bottom: 25px;
+    font-size: clamp(28px, 8vw, 48px); /* 小螢幕28px，大螢幕48px */
 }
 
 /* 下拉選單自適應 */
 select {
-    padding: 12px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 12px;
     border: none;
     margin-bottom: 20px;
-    font-size: clamp(14px, 4vw, 18px);
-    width: 90%;  /* 手機上變寬，貼近 container */
+    font-size: clamp(16px, 4vw, 20px); /* 手機自動放大 */
+    width: 100%;  /* 填滿 container */
+    box-sizing: border-box;
 }
 
 /* 按鈕自適應寬度 */
 button {
-    padding: 12px 0;
+    padding: 15px 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     background: linear-gradient(135deg, #ff7eb3, #8a2be2);
     color: white;
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: clamp(16px, 4vw, 20px); /* 手機自動放大 */
     cursor: pointer;
     transition: 0.3s;
-    width: 90%;  /* 手機上按鈕也填滿 container */
+    width: 100%; /* 填滿 container */
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff7eb3;
 }
 
 button:hover {
@@ -72,11 +76,10 @@ button:hover {
     margin-top: 30px;
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    min-width: 150px;
-    max-width: 90vw;
+    padding: 25px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    width: 100%; /* 填滿 container */
     word-wrap: break-word;
-    font-size: clamp(24px, 10vw, 50px);
+    font-size: clamp(28px, 10vw, 55px); /* 自動縮放字體 */
 }
